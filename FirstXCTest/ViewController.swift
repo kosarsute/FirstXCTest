@@ -9,11 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    private(set) var volume = 0
+    
+    func setVolume(value: Int) {
+        volume = min(max(value, 0), 100)
+    }
+    func charactersCompare(stringOne: String, stringTwo: String) -> Bool {
+        return Set(stringOne) == Set(stringTwo)
     }
 
-
 }
+
 
